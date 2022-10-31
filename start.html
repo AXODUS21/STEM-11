@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ <title> STEM 11 A memories</title>
+ <link
+ rel="Shortcut Icon"
+ type="image/png"
+ href="photos/ADL logo.png"
+>
+ <style>
+  body{
+    background-color: rgb(31, 31, 31);
+    padding-top: 250px;
+  }
+  p{
+    font-size: 28px;
+    margin-top: 0;
+  }
+  #loader{
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      box-sizing: border-box;
+      border-top: 8px solid #fff;
+      border-left: 8px solid #fff;
+      border-right: 8px solid #ff00;
+      animation: loader .7s infinite linear;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+    }
+
+    @keyframes loader{
+      to{
+        transform:rotate(360deg);
+      }
+    }
+#yes{
+  height: 35px;
+  width: 50px;
+  margin-right:10px;
+  background-color: rgb(0, 255, 0);
+  border: none;
+  border-radius: 10px;
+}
+#no{
+  height: 35px;
+  width: 50px;
+  margin-left: 10px;
+  background-color: rgb(255, 0, 0);
+  border: none;
+  border-radius: 10px;
+}
+#yes:hover,
+#no:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}
+ </style>
+  </head>
+  <body>
+    <center>
+      <span id="loader">
+      </span>
+      <div class="wrapper">
+        <div id="container">
+          <p>Are you ready?</p>
+         <a href="javascript:setTimeout(()=>{window. location = 'https://axodus21.github.io/STEM-11/home.html' },5000);"> <button id="yes">YES</button> </a>
+          <button id="no">NO</button>
+        </div>
+      </div>
+  </center>
+  <script>
+    const noBtn = document.getElementById('no');
+    const yesBtn = document.getElementById('yes');
+    const loading = document.getElementById('loader');
+    const text = document.getElementById('container');
+
+    noBtn.addEventListener("click", ()=>{
+      let rand = Math.floor(Math.random() * (500 - 100) + 1);
+      let rand2 = Math.floor(Math.random() * (-300 - 100) + 1);
+      noBtn.style.transform = "translate("+rand+"px,"+rand2+"px)";
+    });
+    yesBtn.addEventListener("click",()=>{
+      loading.style.opacity = "1";
+      text.innerHTML = '';
+    });
+    </script>
+  </body>
+</html>
