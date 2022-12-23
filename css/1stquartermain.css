@@ -1,0 +1,67 @@
+main{
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.collection{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.collection div{
+  display: inline-block;
+  padding:20px;
+}
+.collection img{
+  height: 200px;
+  width: 100%;
+  margin-top: 15px;
+  transition: 0.5s;
+  transition-delay: 0.8s;
+}
+.collection img:hover{
+  transform: scale(1.5);
+  z-index: 2;
+}
+.box {
+  position: relative;
+  width: 99%;
+  height: 100px;
+  color: #fff;
+  background: #151320;
+  font: 700 2rem 'Montserrat';
+  line-height: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.box::before,
+.box::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  top: -15px;
+  left: -15px;
+  border-radius: 8px;
+  background: linear-gradient(45deg,
+      #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000,
+      #ff0055, #ff0000, #ffff00, #00ff00, #0099ff, #001aff, #a200ff
+  );
+  background-size: 300%;
+  animation: border 12s linear infinite;
+}
+
+.box::after {
+  filter: blur(50px);
+}
+
+@keyframes border {
+  0%, 100% {
+      background-position: 0 0;
+  }
+  50% {
+      background-position: 300%;
+  }
+}

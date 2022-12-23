@@ -1,0 +1,70 @@
+.title{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  z-index: 1;
+  position: inherit;
+  padding-top: 20px;
+}
+.video{
+  position:fixed;
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+}
+.intro{
+  display: flex;
+  justify-content: space-between;
+}
+.about{
+  display: flex;
+  font-size: 50px;
+  padding-left: 80px;
+  padding-top: 30px;
+}
+.info{
+  display: flex;
+  padding-left: 80px;
+}
+.info p {
+padding-right: 50px;
+font-size: 18px;
+}
+.picture-container{
+  margin-right: 50px;
+}
+.adviser{
+  display: flex;
+  font-size: 50px;
+  padding-top: 30px;
+}
+.teacher{
+  height: 150px;
+  border-radius: 100px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.class-members{
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+  font-weight: 1000;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+.students{
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
+  font-weight: 800;
+  justify-content:space-evenly;
+}
+.names{
+  font-size: 18px;
+  margin-top: 30px;
+}
+.names div{
+  margin-bottom: 10px;
+}
